@@ -1,0 +1,16 @@
+# Edit the server.properties file
+# $ vim /usr/local/etc/kafka/server.properties
+# Uncomment the listeners property and update the value from
+# listeners=PLAINTEXT://:9092
+# to
+# listeners=PLAINTEXT://localhost:9092
+
+
+# Start Zookeeper in new terminal using:
+# $ zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+
+# Start Kafka in new terminal using:
+# $ kafka-server-start /usr/local/etc/kafka/server.properties
+
+# Create a test kafka topic in new terminal using:
+# $ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
